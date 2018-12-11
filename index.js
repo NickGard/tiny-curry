@@ -1,0 +1,1 @@
+function curry(r,e){var t=+e===e&&e>0?e:r.length,u=[];function n(r){return u.push(r),t==u.length?n.value():n}return n.value=function(){return r.apply(this,u)}.bind(this),n}Object.defineProperty(exports,"__esModule",{value:!0}),exports.curry=curry;
