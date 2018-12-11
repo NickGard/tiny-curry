@@ -16,6 +16,12 @@ tiny-curry: [![bundle size](https://badgen.net/bundlephobia/minzip/@ngard/tiny-c
 
 <hr/>
 
+## Install
+
+```bash
+npm install @ngard/tiny-curry
+```
+
 ## Syntax
 
 ```javascript
