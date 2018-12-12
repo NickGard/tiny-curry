@@ -62,5 +62,18 @@ describe("tiny-curry", () => {
       secondIntermediateFn();
       expect(fn.called).to.be.true;
     });
+    it("should round up fractional numbers to the nearest integer for arity", () => {
+      const fn = sinon.spy(function(a, b) {});
+      const curriedFn = curry(fn, 3.14);
+      expect(fn.called).to.be.false;
+      const intermediateFn = curriedFn();
+      expect(fn.called).to.be.false;
+      const secondIntermediateFn = intermediateFn();
+      expect(fn.called).to.be.false;
+      const thirdIntermediateFn = secondIntermediateFn();
+      expect(fn.called).to.be.false;
+      thirdIntermediateFn();
+      expect(fn.called).to.be.true;
+    });
   });
 });

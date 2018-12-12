@@ -4,11 +4,12 @@ Object.defineProperty(exports, "__esModule", {
 exports.curry = curry;
 
 function curry(fn, arity) {
-  var iterations = +arity === arity && arity > 0 ? arity : fn.length;
+  var iterations = +arity === arity && arity >= 1 ? arity : fn.length;
   var args = [];
+
   function intermediate(arg) {
     args.push(arg);
-    return iterations == args.length ? intermediate.value() : intermediate;
+    return args.length >= iterations ? intermediate.value() : intermediate;
   }
   intermediate.value = function() {
     return fn.apply(this, args);

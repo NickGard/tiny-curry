@@ -36,7 +36,7 @@ curry(/* function [, arity] */);
 ## Returns
 A series of functions that each take a single argument and apply those arguments to the supplied function once they have all been gathered. Each intermediate function also has a `value` method that may be invoked to apply the currently gathered arguments to the function.
 
-## Use
+## Examples
 
 ```javascript
 import { curry } from '@ngard/tiny-curry';
