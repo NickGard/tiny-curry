@@ -1,6 +1,6 @@
 {
   "name": "@ngard/tiny-curry",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A minimal-weight currying utility similar to lodash.curry",
   "main": "index.js",
   "scripts": {
